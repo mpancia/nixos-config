@@ -2,7 +2,7 @@
 with lib;
 let
   cfg = config.local.dock;
-  inherit (pkgs) stdenv dockutil osConfig;
+  inherit (pkgs) stdenv dockutil;
 in
 {
   options = {
