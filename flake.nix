@@ -11,6 +11,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }:
     let
+      user = "msp";
       configuration = { pkgs, ... }: {
         environment.systemPackages =
           [
@@ -36,13 +37,28 @@
 
         # The platform the configuration will be used on.
         nixpkgs.hostPlatform = "aarch64-darwin";
+
+        # Allow unfree packages.
+        nixpkgs.config.allowUnfree = true;
+
       };
+      system = "aarch64-darwin";
     in
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#simple
       darwinConfigurations."Matthews-MacBook-Air" = nix-darwin.lib.darwinSystem {
-        modules = [ configuration home-manager.darwinModules.home-manager ];
+        modules = [
+          configuration
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.${user}.imports = [ ./modules/home-manager ];
+            };
+          }
+        ];
       };
 
       # Expose the package set, including overlays, for convenience.
