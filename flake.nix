@@ -7,12 +7,12 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-doom-emacs, ... }:
     let
       user = "msp";
-      configuration = { pkgs, ... }: { };
     in
     {
       # Build darwin flake using:
@@ -20,13 +20,12 @@
       darwinConfigurations."Matthews-MacBook-Air" = nix-darwin.lib.darwinSystem {
         specialArgs = { inherit user; };
         modules = [
-          configuration
           home-manager.darwinModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.${user}.imports = [ ./modules/home-manager ];
+              users.${user}.imports = [ ./modules/home-manager nix-doom-emacs.hmModule ];
             };
           }
           ./modules/dock

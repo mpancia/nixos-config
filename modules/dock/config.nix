@@ -5,6 +5,7 @@
     { path = "/System/Applications/Messages.app/"; }
     { path = "/System/Applications/Facetime.app/"; }
     { path = "/Applications/Discord.app/"; }
+    { path = "/Applications/Slack.app/"; }
     { path = "/System/Applications/Mail.app/"; }
     { path = "/System/Applications/Calendar.app/"; }
     { path = "/System/Applications/Music.app/"; }
