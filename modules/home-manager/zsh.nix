@@ -9,6 +9,11 @@
       update = "darwin-rebuild switch --flake ~/.nixpkgs";
       nixcfg = "code ~/.nixpkgs";
     };
+    initExtraBeforeCompInit = ''
+      # p10k instant prompt
+      P10K_INSTANT_PROMPT="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"
+      [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
+    '';
     plugins = [
       {
         name = "powerlevel10k";
@@ -38,7 +43,6 @@
         "vi-mode"
         "vscode"
       ];
-      theme = "jonathan";
     };
   };
 }

@@ -50,6 +50,7 @@ in
         pkgs.poetry
         pkgs.ripgrep
         pkgs.shellcheck
+        (R-with-my-packages { inherit pkgs; })
       ];
   };
 

@@ -29,6 +29,10 @@ in
       "vim.useSystemClipboard" = true;
       "vim.normalModeKeyBindingsNonRecursive" = [
         {
+          "before" = [ "g" "D" ];
+          "commands" = [ "editor.action.revealDefinitionAside" ];
+        }
+        {
           "before" = [ "<space>" ];
           "commands" = [ "vspacecode.space" ];
         }
@@ -88,7 +92,7 @@ in
       ms-python.black-formatter
       ms-python.python
       ms-python.vscode-pylance
-      vscodevim.vim
+      # vscodevim.vim
       yzhang.markdown-all-in-one
     ] ++ (
       with marketplace_extensions.vscode-marketplace; [
@@ -96,6 +100,7 @@ in
         vspacecode.vspacecode
         vspacecode.whichkey
         usernamehw.errorlens
+        asvetliakov.vscode-neovim
         donjayamanne.githistory
         dracula-theme.theme-dracula
         kamikillerto.vscode-colorize
@@ -104,11 +109,12 @@ in
         oderwat.indent-rainbow
         rdebugger.r-debugger
         reditorsupport.r
+        ms-vscode.vscode-typescript-next
         ritwickdey.liveserver
         sainnhe.gruvbox-material
         sourcery.sourcery
         richie5um2.vscode-sort-json
-        visualstudioexptteam.vscodeintellicode
+        # visualstudioexptteam.vscodeintellicode
         vscode-icons-team.vscode-icons
         wayou.vscode-todo-highlight
       ]

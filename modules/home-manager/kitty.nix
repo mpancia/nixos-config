@@ -3,7 +3,7 @@
     enable = true;
     font = {
       name = "FantasqueSansM Nerd Font Mono";
-      size = 14;
+      size = 12;
     };
     shellIntegration.enableZshIntegration = true;
     theme = "Gruvbox Material Dark Hard";
