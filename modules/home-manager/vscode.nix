@@ -105,6 +105,7 @@ in
         dracula-theme.theme-dracula
         kamikillerto.vscode-colorize
         ms-toolsai.jupyter
+        jetpack-io.devbox
         ms-vscode-remote.remote-containers
         oderwat.indent-rainbow
         rdebugger.r-debugger

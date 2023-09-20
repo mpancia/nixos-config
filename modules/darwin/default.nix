@@ -5,6 +5,8 @@ let
     virtualenv
     black
     requests
+    ipython
+    jupyterlab
   ];
   R-with-my-packages = { pkgs, ... }: pkgs.radianWrapper.override {
     wrapR = true;
@@ -34,12 +36,15 @@ in
     variables.LANG = "en_US.UTF-8";
     systemPackages =
       [
+        (R-with-my-packages { inherit pkgs; })
+        (pkgs.python310.withPackages my-python-packages)
         pkgs."_1password"
         pkgs.aspell
         pkgs.awscli
         pkgs.coreutils
         pkgs.ctags
         pkgs.curl
+        pkgs.devbox
         pkgs.ffmpeg
         pkgs.jq
         pkgs.mosh
@@ -50,7 +55,6 @@ in
         pkgs.poetry
         pkgs.ripgrep
         pkgs.shellcheck
-        (R-with-my-packages { inherit pkgs; })
       ];
   };
 

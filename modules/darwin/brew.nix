@@ -19,6 +19,7 @@
       "steam"
       "tailscale"
       "zoom"
+      "signal"
     ];
   };
 }
