@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./doom.nix
     ./fzf.nix
     ./git.nix
     ./kitty.nix

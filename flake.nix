@@ -36,7 +36,26 @@
         ];
       };
 
+      darwinConfigurations."Matthews-Mac-Studio" = nix-darwin.lib.darwinSystem {
+        specialArgs = { inherit user; };
+        modules = [
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.${user}.imports = [ ./modules/home-manager nix-doom-emacs.hmModule ];
+            };
+          }
+          ./modules/dock
+          {
+            local.dock = (import ./modules/dock/config.nix { user = user; });
+          }
+          ./modules/darwin
+        ];
+      };
+
       # Expose the package set, including overlays, for convenience.
-      darwinPackages = self.darwinConfigurations."Matthews-MacBook-Air".pkgs;
+      darwinPackages = self.darwinConfigurations."Matthews-Mac-Studio".pkgs;
     };
 }
