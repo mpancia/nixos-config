@@ -1,33 +1,26 @@
 cask "valhalla" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.3.1"
-  sha256 "cc9bac7e1fd8ea873d8ea31545f423d9e3b0abaab5a37b967e57298e31dd5bc6"
+  version "2.5.0"
+  sha256 "ec400a6491523e7f782cd574f62918ce42c543c4c0c0da8248c202bc9be03c41"
 
-  url "https://oeksound.ams3.cdn.digitaloceanspaces.com/soothe2_v#{version.no_dots}_Mac.pkg",
-      verified: "oeksound.ams3.cdn.digitaloceanspaces.com/"
-  name "Soothe 2"
-  desc "Dynamic resonance suppressor"
-  homepage "https://oeksound.com/plugins/soothe2/"
+  url "https://valhallaproduction.s3.us-west-2.amazonaws.com/supermassive/ValhallaSupermassiveOSX_2_5_0.dmg",
+      verified: "valhallaproduction.s3.us-west-2.amazonaws.com/supermassive/"
+  name "Valhalla Supermassive"
+  desc "Massive delay and reverb effect"
+  homepage "https://valhalladsp.com/shop/reverb/valhalla-supermassive/"
 
-  livecheck do
-    url "https://oeksound.com/changelog/soothe2/"
-    regex(/<h3>v?(\d+(?:\.\d+)+)[" <]/i)
-  end
+#   livecheck do
+    # url "https://oeksound.com/changelog/soothe2/"
+    # regex(/<h3>v?(\d+(?:\.\d+)+)[" <]/i)
+#   end
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "soothe2_v#{version.no_dots}_Mac.pkg"
+  pkg "ValhallaSupermassiveOSX_2_5_0.dmg"
 
   uninstall pkgutil: [
-    "com.oeksound.soothe2.aax",
-    "com.oeksound.soothe2.au",
-    "com.oeksound.soothe2.common",
-    "com.oeksound.soothe2.vst",
-    "com.oeksound.soothe2.vst3",
   ]
 
   zap trash: [
-    "~/Documents/oeksound/soothe2/presets",
-    "~/Library/Application Support/oeksound/soothe2/config.xml",
   ]
 end
