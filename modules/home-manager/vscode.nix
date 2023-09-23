@@ -113,7 +113,7 @@ in
         ms-vscode.vscode-typescript-next
         ritwickdey.liveserver
         sainnhe.gruvbox-material
-        sourcery.sourcery
+        # sourcery.sourcery
         richie5um2.vscode-sort-json
         # visualstudioexptteam.vscodeintellicode
         vscode-icons-team.vscode-icons

@@ -40,8 +40,8 @@ in
         (pkgs.python310.withPackages my-python-packages)
         pkgs."_1password"
         pkgs.aspell
+        pkgs.nodePackages.carbon-now-cli
         pkgs.awscli
-        pkgs.coreutils
         pkgs.ctags
         pkgs.curl
         pkgs.devbox

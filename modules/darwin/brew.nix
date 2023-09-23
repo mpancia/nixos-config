@@ -20,6 +20,10 @@
       "tailscale"
       "zoom"
       "signal"
+      "surge-xt"
+      "audiogridder-plugin"
+      "bitwig-studio"
+      "ableton-live-suite"
     ];
   };
 }
