@@ -1,4 +1,4 @@
-cask "valhalla" do
+cask "valhallareverb" do
   version "2.5.0"
   sha256 "393a92c77b02625c539b233be471a2fb3e93eb1ff43b7f9f8956f77dde72323e"
 
