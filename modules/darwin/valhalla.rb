@@ -1,7 +1,7 @@
 cask "valhalla" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
   version "2.5.0"
-  sha256 "ec400a6491523e7f782cd574f62918ce42c543c4c0c0da8248c202bc9be03c41"
+  sha256 "393a92c77b02625c539b233be471a2fb3e93eb1ff43b7f9f8956f77dde72323e"
 
   url "https://valhallaproduction.s3.us-west-2.amazonaws.com/supermassive/ValhallaSupermassiveOSX_2_5_0.dmg",
       verified: "valhallaproduction.s3.us-west-2.amazonaws.com/supermassive/"
