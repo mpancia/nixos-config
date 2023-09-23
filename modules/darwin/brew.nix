@@ -20,7 +20,7 @@
       "tailscale"
       "zoom"
       "signal"
-      "https://raw.githubusercontent.com/mpancia/nixos-config/main/modules/darwin/valhalla.rb"
+      "https://raw.githubusercontent.com/mpancia/nixos-config/main/modules/darwin/valhallareverb.rb"
       "surge-xt"
       "audiogridder-plugin"
       "bitwig-studio"

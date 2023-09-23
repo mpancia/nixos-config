@@ -1,5 +1,4 @@
 cask "valhalla" do
-  # NOTE: "2" is not a version number, but an intrinsic part of the product name
   version "2.5.0"
   sha256 "393a92c77b02625c539b233be471a2fb3e93eb1ff43b7f9f8956f77dde72323e"
 
