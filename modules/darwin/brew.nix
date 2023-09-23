@@ -20,6 +20,7 @@
       "tailscale"
       "zoom"
       "signal"
+      "https://raw.githubusercontent.com/Homebrew/homebrew-cask/HEAD/Casks/g/google-chrome.rb"
       "surge-xt"
       "audiogridder-plugin"
       "bitwig-studio"

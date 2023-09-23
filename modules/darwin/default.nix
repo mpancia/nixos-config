@@ -39,6 +39,7 @@ in
         (R-with-my-packages { inherit pkgs; })
         (pkgs.python310.withPackages my-python-packages)
         pkgs."_1password"
+        pkgs.act
         pkgs.aspell
         pkgs.silicon
         pkgs.awscli
