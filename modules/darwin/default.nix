@@ -49,6 +49,7 @@ in
         pkgs.ffmpeg
         pkgs.jq
         pkgs.mosh
+        pkgs.nushellFull
         pkgs.nil
         pkgs.nixpkgs-fmt
         pkgs.nodePackages.prettier

@@ -2,6 +2,9 @@
   homebrew = {
     enable = true;
     onActivation = { autoUpdate = true; cleanup = "zap"; upgrade = true; };
+    brews = [
+      "opus"
+    ];
     casks = [
       "1password"
       "arc"
@@ -20,7 +23,6 @@
       "tailscale"
       "zoom"
       "signal"
-      "https://raw.githubusercontent.com/mpancia/nixos-config/main/modules/darwin/valhallareverb.rb"
       "surge-xt"
       "audiogridder-plugin"
       "bitwig-studio"
