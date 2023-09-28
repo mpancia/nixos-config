@@ -2,6 +2,10 @@
   homebrew = {
     enable = true;
     onActivation = { autoUpdate = true; cleanup = "zap"; upgrade = true; };
+    taps = [
+      "homebrew/cask-versions"
+      "gcenx/wine"
+    ];
     brews = [
       "opus"
     ];
@@ -15,13 +19,16 @@
       "moonlight"
       "obsidian"
       "orbstack"
+      "gcenx/wine/wineskin"
       "plex"
+      "wine-staging"
       "plexamp"
       "raycast"
       "slack"
       "steam"
       "tailscale"
       "zoom"
+      "the-unarchiver"
       "signal"
       "surge-xt"
       "audiogridder-plugin"

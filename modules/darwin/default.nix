@@ -45,6 +45,7 @@ in
         pkgs.awscli
         pkgs.ctags
         pkgs.curl
+        pkgs.wget
         pkgs.devbox
         pkgs.ffmpeg
         pkgs.jq

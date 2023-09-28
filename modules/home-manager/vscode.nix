@@ -110,6 +110,7 @@ in
         oderwat.indent-rainbow
         rdebugger.r-debugger
         reditorsupport.r
+        ms-vscode-remote.remote-ssh
         ms-vscode.vscode-typescript-next
         ritwickdey.liveserver
         sainnhe.gruvbox-material
