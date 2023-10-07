@@ -41,23 +41,25 @@ in
         pkgs."_1password"
         pkgs.act
         pkgs.aspell
-        pkgs.silicon
         pkgs.awscli
         pkgs.ctags
         pkgs.curl
-        pkgs.wget
         pkgs.devbox
         pkgs.ffmpeg
+        pkgs.gorilla-cli
         pkgs.jq
         pkgs.mosh
-        pkgs.nushellFull
         pkgs.nil
         pkgs.nixpkgs-fmt
         pkgs.nodePackages.prettier
+        pkgs.nushellFull
         pkgs.pandoc
         pkgs.poetry
         pkgs.ripgrep
         pkgs.shellcheck
+        pkgs.silicon
+        pkgs.yt-dlp
+        pkgs.wget
       ];
   };
 

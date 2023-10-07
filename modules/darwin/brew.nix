@@ -26,6 +26,8 @@
       "raycast"
       "slack"
       "steam"
+      "audacity"
+      "vlc"
       "tailscale"
       "zoom"
       "the-unarchiver"

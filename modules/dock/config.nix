@@ -15,8 +15,10 @@
     { path = "/System/Applications/Photos.app/"; }
     { path = "/System/Applications/Home.app/"; }
     { path = "/Users/${user}/Applications/Home Manager Apps/Visual Studio Code.app"; }
-    { path = "/Users/${user}/Applications/Home Manager Apps/kitty.app"; }
     { path = "/Applications/Obsidian.app/"; }
+    { path = "/Users/${user}/Applications/Home Manager Apps/kitty.app"; }
+    { path = "/Applications/Bitwig Studio.app"; }
+    { path = "/Applications/Ableton Live 11 Suite.app"; }
     { path = "/Applications/1Password.app/"; }
     {
       path = "";
@@ -38,14 +40,22 @@
       path = "";
       options = "--type small-spacer --section apps --after Home";
     }
+    {
+      path = "";
+      options = "--type small-spacer --section apps --after kitty";
+    }
+    {
+      path = "";
+      options = "--type small-spacer --section apps --after 'Ableton Live 11 Suite'";
+    }
     # Folders:
     {
-      path = "/Users/${user}/Downloads/";
+      path = "/Users/${user}/Downloads";
       section = "others";
       options = "--sort dateadded --view list --display stack";
     }
     {
-      path = "/Users/${user}/coding/";
+      path = "/Users/${user}/coding";
       section = "others";
       options = "--sort dateadded --view grid --display folder";
     }
