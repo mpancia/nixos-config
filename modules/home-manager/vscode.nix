@@ -9,8 +9,8 @@ let
 in
 {
   programs.vscode = {
-    enable = true;
-    mutableExtensionsDir = false;
+    enable = false;
+    mutableExtensionsDir = true;
     userSettings = {
       "diffEditor.experimental.useVersion2" = true;
       "editor.accessibilitySupport" = "off";
@@ -20,6 +20,7 @@ in
       "editor.minimap.autohide" = false;
       "nixEnvSelector.suggestion" = false;
       "r.bracketedPaste" = false;
+      "git.openRepositoryInParentFolders" = "always";
       "r.rterm.mac" = "/run/current-system/sw/bin/radian";
       "vim.easymotion" = true;
       "vim.enableNeovim" = true;
@@ -92,32 +93,38 @@ in
       ms-python.black-formatter
       ms-python.python
       ms-python.vscode-pylance
-      # vscodevim.vim
+      ms-vscode-remote.remote-ssh
+      jdinhlife.gruvbox
       yzhang.markdown-all-in-one
     ] ++ (
       with marketplace_extensions.vscode-marketplace; [
-        qingpeng.common-lisp
-        vspacecode.vspacecode
-        vspacecode.whichkey
-        usernamehw.errorlens
+        # sourcery.sourcery
+        # visualstudioexptteam.vscodeintellicode
         asvetliakov.vscode-neovim
         donjayamanne.githistory
         dracula-theme.theme-dracula
-        kamikillerto.vscode-colorize
-        ms-toolsai.jupyter
         jetpack-io.devbox
+        kamikillerto.vscode-colorize
+        marus25.cortex-debug
+        mcu-debug.debug-tracker-vscode
+        mcu-debug.memory-view
+        mcu-debug.peripheral-viewer
+        mcu-debug.rtos-views
+        ms-azuretools.vscode-docker
+        ms-toolsai.jupyter
         ms-vscode-remote.remote-containers
+        ms-vscode.makefile-tools
+        ms-vscode.vscode-typescript-next
         oderwat.indent-rainbow
+        qingpeng.common-lisp
         rdebugger.r-debugger
         reditorsupport.r
-        ms-vscode-remote.remote-ssh
-        ms-vscode.vscode-typescript-next
-        ritwickdey.liveserver
-        sainnhe.gruvbox-material
-        # sourcery.sourcery
         richie5um2.vscode-sort-json
-        # visualstudioexptteam.vscodeintellicode
+        ritwickdey.liveserver
+        usernamehw.errorlens
         vscode-icons-team.vscode-icons
+        vspacecode.vspacecode
+        vspacecode.whichkey
         wayou.vscode-todo-highlight
       ]
     );

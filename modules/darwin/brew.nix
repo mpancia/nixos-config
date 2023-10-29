@@ -29,6 +29,7 @@
       "audacity"
       "vlc"
       "tailscale"
+      "visual-studio-code"
       "zoom"
       "the-unarchiver"
       "signal"

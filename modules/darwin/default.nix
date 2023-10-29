@@ -7,6 +7,7 @@ let
     requests
     ipython
     jupyterlab
+    pyparsing
   ];
   R-with-my-packages = { pkgs, ... }: pkgs.radianWrapper.override {
     wrapR = true;
@@ -40,12 +41,16 @@ in
         (pkgs.python310.withPackages my-python-packages)
         pkgs."_1password"
         pkgs.act
+        pkgs.openocd
         pkgs.aspell
+        pkgs.audible-cli
         pkgs.awscli
         pkgs.ctags
         pkgs.curl
         pkgs.devbox
+        pkgs.dfu-util
         pkgs.ffmpeg
+        pkgs.gcc-arm-embedded
         pkgs.gorilla-cli
         pkgs.jq
         pkgs.mosh
@@ -56,10 +61,11 @@ in
         pkgs.pandoc
         pkgs.poetry
         pkgs.ripgrep
+        pkgs.rustup
         pkgs.shellcheck
         pkgs.silicon
-        pkgs.yt-dlp
         pkgs.wget
+        pkgs.yt-dlp
       ];
   };
 

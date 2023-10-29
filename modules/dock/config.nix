@@ -3,6 +3,7 @@
   entries = [
     { path = "/Applications/Arc.app"; }
     { path = "/System/Applications/Messages.app/"; }
+    { path = "/Applications/Signal.app/"; }
     { path = "/System/Applications/Facetime.app/"; }
     { path = "/Applications/Discord.app/"; }
     { path = "/Applications/Slack.app/"; }
@@ -14,7 +15,7 @@
     { path = "/Applications/Plexamp.app"; }
     { path = "/System/Applications/Photos.app/"; }
     { path = "/System/Applications/Home.app/"; }
-    { path = "/Users/${user}/Applications/Home Manager Apps/Visual Studio Code.app"; }
+    { path = "/Applications/Visual Studio Code.app"; }
     { path = "/Applications/Obsidian.app/"; }
     { path = "/Users/${user}/Applications/Home Manager Apps/kitty.app"; }
     { path = "/Applications/Bitwig Studio.app"; }
