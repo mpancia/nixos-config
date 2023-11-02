@@ -48,6 +48,10 @@ in
         pkgs.ctags
         pkgs.curl
         pkgs.devbox
+        pkgs.timewarrior
+        pkgs.gh
+        pkgs.taskwarrior
+        pkgs.taskwarrior-tui
         pkgs.dfu-util
         pkgs.ffmpeg
         pkgs.gcc-arm-embedded

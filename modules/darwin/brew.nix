@@ -18,6 +18,7 @@
       "karabiner-elements"
       "moonlight"
       "obsidian"
+      "calibre"
       "orbstack"
       "gcenx/wine/wineskin"
       "plex"
