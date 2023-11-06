@@ -62,6 +62,8 @@ in
         pkgs.nixpkgs-fmt
         pkgs.nodePackages.prettier
         pkgs.nushellFull
+        pkgs.nimble-unwrapped
+        pkgs.nim-unwrapped
         pkgs.pandoc
         pkgs.poetry
         pkgs.ripgrep
