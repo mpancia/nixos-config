@@ -26,6 +26,8 @@
           "FiraCode"
           "DroidSansMono"
           "FantasqueSansMono"
+          "JetBrainsMono"
+          "Monofur"
         ];
       })
     ];

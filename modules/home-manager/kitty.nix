@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "FantasqueSansM Nerd Font Mono";
+      name = "JetBrainsMono Nerd Font Mono";
       size = 12;
     };
     shellIntegration.enableZshIntegration = true;
@@ -15,5 +15,9 @@
       enable_audio_bell = false;
       tab_bar_edge = "top"; # tab bar on top
     };
+    extraConfig = ''
+    font_features MonoLisa +zero +ss04 +ss07 +ss08 +ss09
+    font_features MonoLisaItalic +zero +ss04 +ss07 +ss08 +ss09
+    '';
   };
 }
