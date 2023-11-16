@@ -1,14 +1,13 @@
 {
   homebrew = {
     enable = true;
-    onActivation = { autoUpdate = true; cleanup = "zap"; upgrade = true; };
-    taps = [
-      "homebrew/cask-versions"
-      "gcenx/wine"
-    ];
-    brews = [
-      "opus"
-    ];
+    onActivation = {
+      autoUpdate = true;
+      cleanup = "zap";
+      upgrade = true;
+    };
+    taps = [ "homebrew/cask-versions" "gcenx/wine" ];
+    brews = [ "opus" ];
     casks = [
       "1password"
       "ableton-live-suite"
@@ -25,6 +24,7 @@
       "jellyfin-media-player"
       "karabiner-elements"
       "moonlight"
+      "nextcloud"
       "obsidian"
       "orbstack"
       "plex"
@@ -34,6 +34,7 @@
       "slack"
       "steam"
       "surge-xt"
+      "syncthing"
       "tailscale"
       "the-unarchiver"
       "visual-studio-code"
