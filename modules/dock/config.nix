@@ -18,6 +18,7 @@
     { path = "/Applications/Visual Studio Code.app"; }
     { path = "/Applications/Obsidian.app/"; }
     { path = "/Users/${user}/Applications/Home Manager Apps/kitty.app"; }
+    { path = "/Applications/Warp.app/"; }
     { path = "/Applications/Bitwig Studio.app"; }
     { path = "/Applications/Ableton Live 11 Suite.app"; }
     { path = "/Applications/1Password.app/"; }
@@ -43,7 +44,7 @@
     }
     {
       path = "";
-      options = "--type small-spacer --section apps --after kitty";
+      options = "--type small-spacer --section apps --after Warp";
     }
     {
       path = "";
