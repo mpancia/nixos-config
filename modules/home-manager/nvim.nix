@@ -15,7 +15,6 @@
     withPython3 = true;
     vimdiffAlias = true;
     extraConfig = ''
-      :luafile ~/.config/nvim/lua/init.lua
       set tabstop=4
       set shiftwidth=4
       highlight OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
@@ -47,6 +46,8 @@
         nnoremap <silent> <Space> :call VSCodeNotify('whichkey.show')<CR>
         xnoremap <silent> <Space> :call VSCodeNotify('whichkey.show')<CR>
       endif 
+
+      :luafile ~/.config/nvim/lua/init.lua
 
     '';
   };
