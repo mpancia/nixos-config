@@ -5,12 +5,11 @@
     defaultEditor = true;
     plugins = with pkgs.vimPlugins;
       with pkgs.vimExtraPlugins; [
-        vim-easymotion
-        vim-commentary
-        vim-sandwich
-        lsp-zero-nvim
         plenary-nvim
         telescope-nvim
+        gruvbox
+        nvim-treesitter
+        harpoon
       ];
     viAlias = true;
     vimAlias = true;
@@ -35,7 +34,6 @@
 
 
       :luafile ~/.config/nvim/lua/init.lua
-
     '';
   };
   xdg.configFile.nvim = {

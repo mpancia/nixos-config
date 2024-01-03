@@ -20,3 +20,5 @@ set.incsearch = true
 
 set.scrolloff = 8
 set.updatetime = 50
+
+vim.cmd('colorscheme gruvbox')

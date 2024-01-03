@@ -7,18 +7,14 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     nixneovimplugins.url = "github:jooooscha/nixpkgs-vim-extra-plugins";
   };
 
-  outputs =
-    inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-doom-emacs, ... }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }:
     let
       user = "msp";
       nixpkgs.overlays = [ inputs.nixneovimplugins.overlays.default ];
     in {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#simple
       darwinConfigurations."Matthews-MacBook-Air" =
         nix-darwin.lib.darwinSystem {
           specialArgs = { inherit user; };
@@ -29,8 +25,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.${user}.imports =
-                  [ ./modules/home-manager nix-doom-emacs.hmModule ];
+                users.${user}.imports = [ ./modules/home-manager ];
               };
             }
             ./modules/dock
@@ -50,8 +45,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.${user}.imports =
-                [ ./modules/home-manager nix-doom-emacs.hmModule ];
+              users.${user}.imports = [ ./modules/home-manager ];
             };
           }
           ./modules/dock

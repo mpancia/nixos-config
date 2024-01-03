@@ -54,6 +54,7 @@ in {
       pkgs.djvu2pdf
       pkgs.entr
       pkgs.eza
+      pkgs.fd
       pkgs.ffmpeg
       pkgs.gcc-arm-embedded
       pkgs.gh
@@ -63,8 +64,6 @@ in {
       pkgs.mc
       pkgs.mosh
       pkgs.nil
-      pkgs.nim-unwrapped
-      pkgs.nimble-unwrapped
       pkgs.nixfmt
       pkgs.nixpkgs-fmt
       pkgs.nodePackages.prettier
