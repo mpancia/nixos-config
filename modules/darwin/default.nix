@@ -1,26 +1,30 @@
 { pkgs, lib, user, ... }:
 let
-  my-python-packages = ps: with ps; [
-    pandas
-    virtualenv
-    black
-    requests
-    ipython
-    jupyterlab
-    pyparsing
-  ];
-  R-with-my-packages = { pkgs, ... }: pkgs.radianWrapper.override {
-    wrapR = true;
-    packages = with pkgs.rPackages; [
-      tidyverse
-      languageserver
-      httpgd
-      blogdown
-      rprofile
+  my-python-packages = ps:
+    with ps; [
+      pandas
+      virtualenv
+      black
+      requests
+      ipython
+      jupyterlab
+      pyparsing
+      pylsp-rope
+      pylsp-mypy
+      python-lsp-ruff
     ];
-  };
-in
-{
+  R-with-my-packages = { pkgs, ... }:
+    pkgs.radianWrapper.override {
+      wrapR = true;
+      packages = with pkgs.rPackages; [
+        tidyverse
+        languageserver
+        httpgd
+        blogdown
+        rprofile
+      ];
+    };
+in {
   imports = [ ./brew.nix ];
   programs.zsh.enable = true;
   users.users.${user}.home = "/Users/${user}";
@@ -35,44 +39,52 @@ in
     loginShell = "${pkgs.zsh}/bin/zsh -l";
     variables.SHELL = "${pkgs.zsh}/bin/zsh";
     variables.LANG = "en_US.UTF-8";
-    systemPackages =
-      [
-        (R-with-my-packages { inherit pkgs; })
-        (pkgs.python310.withPackages my-python-packages)
-        pkgs."_1password"
-        pkgs.act
-        pkgs.openocd
-        pkgs.aspell
-        pkgs.audible-cli
-        pkgs.awscli
-        pkgs.ctags
-        pkgs.curl
-        pkgs.devbox
-        pkgs.timewarrior
-        pkgs.gh
-        pkgs.taskwarrior
-        pkgs.taskwarrior-tui
-        pkgs.dfu-util
-        pkgs.ffmpeg
-        pkgs.gcc-arm-embedded
-        pkgs.gorilla-cli
-        pkgs.jq
-        pkgs.mosh
-        pkgs.nil
-        pkgs.nixpkgs-fmt
-        pkgs.nodePackages.prettier
-        pkgs.nushellFull
-        pkgs.nimble-unwrapped
-        pkgs.nim-unwrapped
-        pkgs.pandoc
-        pkgs.poetry
-        pkgs.ripgrep
-        pkgs.rustup
-        pkgs.shellcheck
-        pkgs.silicon
-        pkgs.wget
-        pkgs.yt-dlp
-      ];
+    systemPackages = [
+      (R-with-my-packages { inherit pkgs; })
+      (pkgs.python310.withPackages my-python-packages)
+      pkgs."_1password"
+      pkgs.act
+      pkgs.aspell
+      pkgs.audible-cli
+      pkgs.awscli
+      pkgs.ctags
+      pkgs.curl
+      pkgs.devbox
+      pkgs.dfu-util
+      pkgs.djvu2pdf
+      pkgs.entr
+      pkgs.eza
+      pkgs.ffmpeg
+      pkgs.gcc-arm-embedded
+      pkgs.gh
+      pkgs.gorilla-cli
+      pkgs.helix
+      pkgs.jq
+      pkgs.mc
+      pkgs.mosh
+      pkgs.nil
+      pkgs.nim-unwrapped
+      pkgs.nimble-unwrapped
+      pkgs.nixfmt
+      pkgs.nixpkgs-fmt
+      pkgs.nodePackages.prettier
+      pkgs.nushellFull
+      pkgs.openocd
+      pkgs.pandoc
+      pkgs.poetry
+      pkgs.pyenv
+      pkgs.ripgrep
+      pkgs.rustup
+      pkgs.shellcheck
+      pkgs.silicon
+      pkgs.taskwarrior
+      pkgs.taskwarrior-tui
+      pkgs.texlive.combined.scheme-full
+      pkgs.timewarrior
+      pkgs.wget
+      pkgs.yt-dlp
+      pkgs.zoxide
+    ];
   };
 
   nix.settings.experimental-features = "nix-command flakes";
@@ -159,16 +171,20 @@ in
           WarnAboutFraudulentWebsites = true;
           WebKitJavaEnabled = false;
           WebKitJavaScriptCanOpenWindowsAutomatically = false;
-          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks" = true;
-          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true;
-          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled" = false;
-          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled" = false;
-          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles" = false;
-          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically" = false;
+          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks" =
+            true;
+          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" =
+            true;
+          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled" =
+            false;
+          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled" =
+            false;
+          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles" =
+            false;
+          "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically" =
+            false;
         };
-        "com.apple.AdLib" = {
-          allowApplePersonalizedAdvertising = false;
-        };
+        "com.apple.AdLib" = { allowApplePersonalizedAdvertising = false; };
         "com.apple.SoftwareUpdate" = {
           AutomaticCheckEnabled = true;
           # Check for software updates daily, not just once per week
@@ -195,7 +211,7 @@ in
   };
 
   security.pam.enableSudoTouchIdAuth = true;
-  
+
   nixpkgs = {
     hostPlatform = "aarch64-darwin";
     config.allowUnfree = true;

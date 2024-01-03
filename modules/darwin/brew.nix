@@ -7,7 +7,7 @@
       upgrade = true;
     };
     taps = [ "homebrew/cask-versions" "gcenx/wine" ];
-    brews = [ "opus" ];
+    brews = [ "opus" "openjdk@11"];
     casks = [
       "1password"
       "ableton-live-suite"
@@ -35,6 +35,7 @@
       "steam"
       "surge-xt"
       "syncthing"
+      "amethyst"
       "tailscale"
       "the-unarchiver"
       "visual-studio-code"

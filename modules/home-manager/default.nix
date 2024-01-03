@@ -44,5 +44,8 @@
         theme = "gruvbox-dark";
       };
     };
-  };
+      zoxide = {
+        enable = true;
+      };
+    };
 }

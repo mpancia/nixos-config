@@ -5,9 +5,13 @@
     enableCompletion = true;
     enableAutosuggestions = true;
     shellAliases = {
-      ll = "ls -l";
+      ll = "exa -alh";
       update = "darwin-rebuild switch --flake ~/.nixpkgs";
       nixcfg = "code ~/.nixpkgs";
+      cat = "bat";
+      ls = "exa";
+      tree = "exa --tree";
+      cd = "z";
     };
     initExtraBeforeCompInit = ''
       # p10k instant prompt
