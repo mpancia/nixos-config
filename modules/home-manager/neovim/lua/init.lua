@@ -1,2 +1,4 @@
+require('defaults')
 require('lsp-config')
-require('vscode')
+require('remaps')
+require('telescope')

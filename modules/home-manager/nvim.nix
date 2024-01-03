@@ -9,14 +9,14 @@
         vim-commentary
         vim-sandwich
         lsp-zero-nvim
+        plenary-nvim
+        telescope-nvim
       ];
     viAlias = true;
     vimAlias = true;
     withPython3 = true;
     vimdiffAlias = true;
     extraConfig = ''
-      set tabstop=4
-      set shiftwidth=4
       highlight OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
       highlight OperatorSandwichChange guifg='#edc41f' gui=underline ctermfg='yellow' cterm=underline
       highlight OperatorSandwichAdd guibg='#b1fa87' gui=none ctermbg='green' cterm=none
