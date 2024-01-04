@@ -27,6 +27,7 @@
       "nextcloud"
       "obsidian"
       "orbstack"
+      "obs"
       "plex"
       "plexamp"
       "raycast"
