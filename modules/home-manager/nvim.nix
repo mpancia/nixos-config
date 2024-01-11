@@ -79,6 +79,7 @@ in {
         "neotest-python" "neotest-python"
         "sha256-AJjsGuP6gAWT5EFrTDWwGg9j5bjkNOn+8Vl6HTY98AE=")
     ]) ++ (with pkgs.vimPlugins; [
+      iron-nvim
       FixCursorHold-nvim
       cmp-cmdline
       neoconf-nvim
@@ -132,6 +133,8 @@ in {
       ${builtins.readFile neovim/config/lua/tree.lua}
       ${builtins.readFile neovim/config/lua/noice.lua}
       ${builtins.readFile neovim/config/lua/lualine.lua}
+      ${builtins.readFile neovim/config/lua/gitlinker.lua}
+      ${builtins.readFile neovim/config/lua/iron.lua}
     '';
   };
 }
