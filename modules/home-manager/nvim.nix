@@ -40,6 +40,9 @@ in {
       trouble-nvim
       undotree
       which-key-nvim
+      (fromGitHub "008d8d7f8218d38bf87ae4c3f61a42843c31a8f1" "linrongbin16"
+        "gitlinker.nvim" "gitlinker.nvim"
+        "sha256-ZEMK3t4rU5CZQLH8u6BGs9+rZmwTfDTWpRCdIERN7+8=")
       (fromGitHub "e578f353d0b1d9f21a9640458d8e506c0c9acf5e" "echasnovski"
         "mini.nvim" "mini.nvim"
         "sha256-pWMFMfQm70PV0gQGh46imNOr7lJmvXL/eB34BoFVuQQ=")
@@ -128,6 +131,7 @@ in {
       ${builtins.readFile neovim/config/lua/project.lua}
       ${builtins.readFile neovim/config/lua/tree.lua}
       ${builtins.readFile neovim/config/lua/noice.lua}
+      ${builtins.readFile neovim/config/lua/lualine.lua}
     '';
   };
 }
