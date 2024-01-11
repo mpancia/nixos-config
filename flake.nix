@@ -8,12 +8,17 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixneovimplugins.url = "github:jooooscha/nixpkgs-vim-extra-plugins";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }:
     let
       user = "msp";
-      nixpkgs.overlays = [ inputs.nixneovimplugins.overlays.default ];
+      nixpkgs.overlays = [
+        inputs.nixneovimplugins.overlays.default
+        inputs.neovim-nightly-overlay.overlay
+      ];
     in {
       darwinConfigurations."Matthews-MacBook-Air" =
         nix-darwin.lib.darwinSystem {

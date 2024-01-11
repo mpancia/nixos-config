@@ -11,6 +11,7 @@ let
       pyparsing
       pylsp-rope
       pylsp-mypy
+      python-lsp-server
       python-lsp-ruff
     ];
   R-with-my-packages = { pkgs, ... }:
@@ -61,18 +62,24 @@ in {
       pkgs.gorilla-cli
       pkgs.helix
       pkgs.jq
+      pkgs.lua
+      pkgs.lua-language-server
+      pkgs.marksman
       pkgs.mc
       pkgs.mosh
       pkgs.nil
       pkgs.nixfmt
       pkgs.nixpkgs-fmt
       pkgs.nodePackages.prettier
+      pkgs.nodePackages.pyright
       pkgs.nushellFull
+      pkgs.openai
       pkgs.openocd
       pkgs.pandoc
       pkgs.poetry
       pkgs.pyenv
       pkgs.ripgrep
+      pkgs.ruff-lsp
       pkgs.rustup
       pkgs.shellcheck
       pkgs.silicon
@@ -80,6 +87,7 @@ in {
       pkgs.taskwarrior-tui
       pkgs.texlive.combined.scheme-full
       pkgs.timewarrior
+      pkgs.tree-sitter
       pkgs.wget
       pkgs.yt-dlp
       pkgs.zoxide

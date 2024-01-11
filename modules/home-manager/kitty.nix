@@ -14,10 +14,11 @@
       scrollback_lines = 10000;
       enable_audio_bell = false;
       tab_bar_edge = "top"; # tab bar on top
+      alt_send_esc = false;
     };
     extraConfig = ''
-    font_features MonoLisa +zero +ss04 +ss07 +ss08 +ss09
-    font_features MonoLisaItalic +zero +ss04 +ss07 +ss08 +ss09
+      font_features MonoLisa +zero +ss04 +ss07 +ss08 +ss09
+      font_features MonoLisaItalic +zero +ss04 +ss07 +ss08 +ss09
     '';
   };
 }

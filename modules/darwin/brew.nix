@@ -7,10 +7,11 @@
       upgrade = true;
     };
     taps = [ "homebrew/cask-versions" "gcenx/wine" ];
-    brews = [ "opus" "openjdk@11"];
+    brews = [ "opus" "openjdk@11" "pyenv-virtualenv"];
     casks = [
       "1password"
       "ableton-live-suite"
+      "amethyst"
       "arc"
       "audacity"
       "audiogridder-plugin"
@@ -25,9 +26,9 @@
       "karabiner-elements"
       "moonlight"
       "nextcloud"
+      "obs"
       "obsidian"
       "orbstack"
-      "obs"
       "plex"
       "plexamp"
       "raycast"
@@ -36,7 +37,6 @@
       "steam"
       "surge-xt"
       "syncthing"
-      "amethyst"
       "tailscale"
       "the-unarchiver"
       "visual-studio-code"
