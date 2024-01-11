@@ -19,6 +19,7 @@ in {
     defaultEditor = true;
     plugins = (with pkgs.vimExtraPlugins; [
       aerial-nvim
+      lualine-nvim
       copilot-cmp
       diffview-nvim
       gitsigns-nvim
