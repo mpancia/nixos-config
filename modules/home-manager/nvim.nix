@@ -81,6 +81,9 @@ in {
                 (fromGitHub "86ac2bbc8a4da3f203e56d9303d6ed1d7e50c1f6" "nvim-neotest"
                  "neotest-python" "neotest-python"
                  "sha256-AJjsGuP6gAWT5EFrTDWwGg9j5bjkNOn+8Vl6HTY98AE=")
+                (fromGitHub "091e4ae00a12085f9ed4200a3cd04af7179b8a23" "mfussenegger"
+                 "nvim-dap-python" "nvim-dap-python"
+                 "sha256-V/88NHqW/rpHWC2m1dnVZWo3Va7wSPqw3FpEM1+lKgo=")
                 ]) ++ (with pkgs.vimPlugins; [
                     iron-nvim
                     marks-nvim
