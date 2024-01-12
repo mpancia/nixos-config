@@ -165,3 +165,5 @@ require("lazy").setup(
         "ahmedkhalf/project.nvim",
     }
 )
+
+require('defaults')
