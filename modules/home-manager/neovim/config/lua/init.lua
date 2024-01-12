@@ -19,7 +19,7 @@ require("lazy").setup(
             },
         },
         "folke/which-key.nvim",
-        { "folke/neoconf.nvim", cmd = "Neoconf" },
+        { "folke/neoconf.nvim",    cmd = "Neoconf" },
         "folke/neodev.nvim",
         {
             'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' }
@@ -74,7 +74,15 @@ require("lazy").setup(
         "Vigemus/iron.nvim",
         "rafamadriz/friendly-snippets",
         "chentoast/marks.nvim",
-        { 'rose-pine/neovim',   name = 'rose-pine' },
+        {
+            'rose-pine/neovim',
+            name = 'rose-pine',
+            lazy = false,
+            priority = 1000,
+            config = function()
+                vim.cmd([[colorscheme rose-pine]])
+            end,
+        },
         {
             "folke/noice.nvim",
             event = "VeryLazy",
@@ -110,7 +118,7 @@ require("lazy").setup(
             },
             config = true
         },
-        { 'echasnovski/mini.nvim',                       version = false },
+        { 'echasnovski/mini.nvim', version = false },
         {
             "ThePrimeagen/harpoon",
             branch = "harpoon2",
@@ -167,3 +175,4 @@ require("lazy").setup(
 )
 
 require('defaults')
+require('remaps')
