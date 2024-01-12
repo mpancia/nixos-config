@@ -1,11 +1,15 @@
-local lspconfig = require('lspconfig')
+require("neoconf").setup({
+})
 
 require("neodev").setup({
 })
 
+local lspconfig = require('lspconfig')
+lspconfig.jsonls.setup{}
+
 lspconfig.ruff_lsp.setup {}
 lspconfig.pylsp.setup({
-    on_attach = function(client, bufnr)
+    on_attach = function(client, _)
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.document_range_formatting = false
     end,

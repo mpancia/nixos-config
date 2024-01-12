@@ -45,6 +45,7 @@ in {
       (pkgs.python310.withPackages my-python-packages)
       pkgs."_1password"
       pkgs.act
+      pkgs.nurl
       pkgs.aspell
       pkgs.audible-cli
       pkgs.awscli

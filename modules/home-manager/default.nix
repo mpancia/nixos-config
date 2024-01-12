@@ -1,4 +1,4 @@
-{ pkgs, nixvim, ... }: {
+{ pkgs, ... }: {
   imports = [
     ./fzf.nix
     ./git.nix
@@ -16,6 +16,7 @@
     dejavu_fonts
     powerline-fonts
     nodePackages.typescript
+    nodePackages.vscode-langservers-extracted
     nodejs
     yarn
     nodePackages.typescript-language-server

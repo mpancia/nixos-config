@@ -59,6 +59,7 @@ vim.keymap.set("n", "<leader>pb", builtin.buffers, {
 vim.keymap.set("n", "<leader>hf", telescope.extensions.git_signs.git_signs, {
     desc = "Find hunks "
 })
+vim.keymap.set('n', '<leader>pm', builtin.marks, {desc = "Find marks"})
 vim.keymap.set("n", "<leader>pg", builtin.live_grep, {
     desc = "Grep within current directory"
 })
