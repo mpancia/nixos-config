@@ -1,6 +1,6 @@
 return {
     "ahmedkhalf/project.nvim",
     config = function()
-        require("project").setup({})
+        require("project_nvim").setup({})
     end
 }
