@@ -43,20 +43,5 @@ require('lazy').setup('plugins')
 --         {
 --             config = function() require("plugins.dropbar") end,
 --         },
---         {
---             "aznhe21/actions-preview.nvim",
---             config = function() require("plugins.actions-preview") end,
---         },
---         {
---             "ray-x/lsp_signature.nvim",
---             event = "VeryLazy",
---             opts = {},
---             config = function() require("plugins.lsp_signature") end
---         },
---         {
---             "ahmedkhalf/project.nvim",
---             config = function() require("plugins.project") end
---         },
---     }
--- )
 
+k
