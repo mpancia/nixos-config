@@ -24,28 +24,9 @@ require('lazy').setup('plugins')
 --         },
 --         "folke/neodev.nvim",
 
---         {
---             "hrsh7th/nvim-cmp",
---             dependencies = {
---                 "neovim/nvim-lspconfig",
---                 "hrsh7th/cmp-nvim-lsp",
---                 "hrsh7th/cmp-nvim-lua",
---                 "onsails/lspkind-nvim",
---                 "hrsh7th/cmp-buffer",
---                 "hrsh7th/cmp-path",
---                 "saadparwaiz1/cmp_luasnip",
---                 "hrsh7th/cmp-cmdline",
---                 "L3MON4D3/LuaSnip",
---                 "saadparwaiz1/cmp_luasnip",
---             },
 --             config = function() require("plugins.cmp") end,
 --         },
---         {
---             "stevearc/oil.nvim",
---             opts = {},
---             dependencies = { "nvim-tree/nvim-web-devicons" },
---             config = function() require("plugins.oil") end,
---         },
+
 --         {
 --             "altermo/ultimate-autopair.nvim",
 --             event = { "InsertEnter", "CmdlineEnter" },
@@ -116,7 +97,6 @@ require('lazy').setup('plugins')
 --             config = function() require("plugins.diffview") end,
 --         },
 --         "antoinemadec/FixCursorHold.nvim",
---         "zbirenbaum/copilot.lua",
 --         {
 --             "NeogitOrg/neogit",
 --             dependencies = {
@@ -127,12 +107,7 @@ require('lazy').setup('plugins')
 --             config = true
 --         },
 --         { "echasnovski/mini.nvim",                       version = false },
---         {
---             "ThePrimeagen/harpoon",
---             branch = "harpoon2",
---             dependencies = { "nvim-lua/plenary.nvim" },
---             config = function() require("plugins.harpoon") end,
---         },
+
 --         { "nvim-treesitter/nvim-treesitter-context",     dependencies = { "nvim-treesitter/nvim-treesitter" } },
 --         { "nvim-treesitter/nvim-treesitter-textobjects", dependencies = { "nvim-treesitter/nvim-treesitter" } },
 --         { "RRethy/nvim-treesitter-textsubjects",         dependencies = { "nvim-treesitter/nvim-treesitter" } },
@@ -148,12 +123,6 @@ require('lazy').setup('plugins')
 --         {
 --             "stevearc/overseer.nvim",
 --             config = function() require("plugins.overseer") end,
---         },
---         {
---             "zbirenbaum/copilot-cmp",
---             config = function()
---                 require("copilot_cmp").setup()
---             end
 --         },
 --         {
 --             "lukas-reineke/indent-blankline.nvim",
