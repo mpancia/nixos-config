@@ -2,7 +2,8 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {"neovim/nvim-lspconfig", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-nvim-lua", "onsails/lspkind-nvim",
                     "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "saadparwaiz1/cmp_luasnip", "hrsh7th/cmp-cmdline",
-                    "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip", "zbirenbaum/copilot.lua", "zbirenbaum/copilot-cmp"},
+                    "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip", "zbirenbaum/copilot.lua", "zbirenbaum/copilot-cmp",
+                    "rafamadriz/friendly-snippets", "antoinemadec/FixCursorHold.nvim"},
     config = function()
         local cmp = require 'cmp'
         require('luasnip.loaders.from_vscode').load()
