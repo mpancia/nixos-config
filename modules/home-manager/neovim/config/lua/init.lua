@@ -43,5 +43,3 @@ require('lazy').setup('plugins')
 --         {
 --             config = function() require("plugins.dropbar") end,
 --         },
-
-k
