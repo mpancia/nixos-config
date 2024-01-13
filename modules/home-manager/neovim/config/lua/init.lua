@@ -10,21 +10,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('plugins')
 -- require("lazy").setup(
 --     {
---         {
---             "nvim-tree/nvim-tree.lua",
---             version = "*",
---             lazy = false,
---             dependencies = {
---                 "nvim-tree/nvim-web-devicons",
---             },
---             config = function()
---                 require("nvim-tree").setup {}
---             end,
---         },
---         {
---             "Vigemus/iron.nvim",
---             config = function() require("plugins.iron") end,
---         },
 --         "rafamadriz/friendly-snippets",
 --         {
 --             "chentoast/marks.nvim",
@@ -33,11 +18,7 @@ require('lazy').setup('plugins')
 --         "antoinemadec/FixCursorHold.nvim",
 --             config = true
 --         },
---         { "echasnovski/mini.nvim",                       version = false },
 
---         { "nvim-treesitter/nvim-treesitter-context",     dependencies = { "nvim-treesitter/nvim-treesitter" } },
---         { "nvim-treesitter/nvim-treesitter-textobjects", dependencies = { "nvim-treesitter/nvim-treesitter" } },
---         { "RRethy/nvim-treesitter-textsubjects",         dependencies = { "nvim-treesitter/nvim-treesitter" } },
 --         {
 --             "folke/flash.nvim",
 --             event = "VeryLazy",

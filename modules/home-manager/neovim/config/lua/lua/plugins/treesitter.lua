@@ -1,4 +1,4 @@
-return {
+return {{
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
@@ -88,4 +88,13 @@ return {
         })
 
     end
-}
+}, {
+    "nvim-treesitter/nvim-treesitter-context",
+    dependencies = {"nvim-treesitter/nvim-treesitter"}
+}, {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    dependencies = {"nvim-treesitter/nvim-treesitter"}
+}, {
+    "RRethy/nvim-treesitter-textsubjects",
+    dependencies = {"nvim-treesitter/nvim-treesitter"}
+}}
