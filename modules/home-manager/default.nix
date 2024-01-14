@@ -8,6 +8,7 @@
     ./vscode.nix
     ./zsh.nix
     ./nvim.nix
+    ./tmux.nix
   ];
   home.stateVersion = "23.11";
   fonts.fontconfig.enable = true;
