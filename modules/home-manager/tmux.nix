@@ -18,6 +18,7 @@ in {
     sensibleOnTop = true;
     aggressiveResize = true;
     extraConfig = ''
+      set -g status-right "#{tmux_mode_indicator}"
       unbind C-b
       set -g prefix `
       bind-key ` send-prefix
@@ -28,6 +29,7 @@ in {
 
     '';
     plugins = with pkgs; [
+      tmuxPlugins.mode-indicator 
       tmux-nvim
       tmuxPlugins.cpu
       {

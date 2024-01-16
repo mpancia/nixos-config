@@ -52,6 +52,8 @@ in {
                 pkgs.awscli
                 pkgs.ctags
                 pkgs.curl
+                pkgs.rename
+                pkgs.renameutils
                 pkgs.devbox
                 pkgs.dfu-util
                 pkgs.djvu2pdf

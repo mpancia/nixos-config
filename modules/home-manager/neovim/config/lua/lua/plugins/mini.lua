@@ -48,5 +48,6 @@ return {
         require('mini.indentscope').setup()
         require('mini.notify').setup()
         require('mini.comment').setup()
+        require('mini.tabline').setup()
     end
 }
