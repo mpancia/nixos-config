@@ -49,5 +49,6 @@ return {
         require('mini.notify').setup()
         require('mini.comment').setup()
         require('mini.tabline').setup()
+        require('mini.operators').setup()
     end
 }
