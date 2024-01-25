@@ -46,6 +46,7 @@ in {
                 (pkgs.python310.withPackages my-python-packages)
                 pkgs."_1password"
                 pkgs.act
+                pkgs.lazygit
                 pkgs.nurl
                 pkgs.aspell
                 pkgs.audible-cli
@@ -75,6 +76,7 @@ in {
                 pkgs.nixfmt
                 pkgs.nixpkgs-fmt
                 pkgs.nodePackages.prettier
+                pkgs.ranger
                 pkgs.nodePackages.pyright
                 pkgs.nushellFull
                 pkgs.openai
