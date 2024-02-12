@@ -6,6 +6,15 @@ return {
             ["<leader>p"] = {
                 name = "Search"
             },
+            ["<leader>g"] = {
+                name = "Git"
+            },
+            ["<leader>s"] = {
+                name = "Send to REPL"
+            },
+            ["<leader>m"] = {
+                name = "Marks"
+            },
             ["<leader>l"] = {
                 name = "LSP"
             },
