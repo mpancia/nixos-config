@@ -43,15 +43,13 @@ in {
         variables.LANG = "en_US.UTF-8";
         systemPackages = [
             (R-with-my-packages { inherit pkgs; })
-                (pkgs.python311.withPackages my-python-packages)
+                (pkgs.python310.withPackages my-python-packages)
                 pkgs."_1password"
                 pkgs.act
-                pkgs.musikcube
                 pkgs.lazygit
                 pkgs.nurl
+                pkgs.musikcube
                 pkgs.aspell
-                pkgs.cmus
-                pkgs.cmusfm
                 pkgs.audible-cli
                 pkgs.awscli
                 pkgs.ctags

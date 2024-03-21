@@ -20,6 +20,15 @@
     nodePackages.vscode-langservers-extracted
     nodejs
     yarn
+    (
+    pkgs.writeScriptBin "pkl"
+        (
+            (pkgs.fetchurl {
+              url = "https://github.com/apple/pkl/releases/download/0.25.2/pkl-macos-amd64";
+              hash = "sha256-a55HhndpdDTnH2sxGdDd41Cl8BtqffU7xpAHQhY553I=";
+            })
+        )
+    )
     nodePackages.typescript-language-server
     (nerdfonts.override {
       fonts = [

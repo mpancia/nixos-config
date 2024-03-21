@@ -25,6 +25,7 @@ set.timeout = true
 set.foldmethod = "expr"
 set.foldexpr = "nvim_treesitter#foldexpr()"
 set.foldenable = false
+set.clipboard = "unnamedplus"
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

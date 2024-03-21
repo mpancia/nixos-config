@@ -21,4 +21,8 @@
       font_features MonoLisaItalic +zero +ss04 +ss07 +ss08 +ss09
     '';
   };
+  xdg.configFile.kitty = {
+      source = ./dotfiles/kitty;
+      recursive = true;
+  };
 }

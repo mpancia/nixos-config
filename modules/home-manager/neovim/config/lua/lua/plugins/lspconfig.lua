@@ -41,7 +41,6 @@ return {
                 }
             }
         })
-        lspconfig.lua_ls.setup {}
         lspconfig.tsserver.setup {}
         lspconfig.nil_ls.setup {}
         lspconfig.r_language_server.setup {}

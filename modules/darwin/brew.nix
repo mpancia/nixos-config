@@ -10,7 +10,7 @@
     brews = [ "opus" "openjdk@11" "pyenv-virtualenv"];
     casks = [
       "1password"
-      "ableton-live-suite"
+      "basictex"
       "amethyst"
       "arc"
       "audacity"

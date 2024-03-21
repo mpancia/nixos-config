@@ -13,6 +13,7 @@
     { path = "/Applications/Jellyfin Media Player.app/"; }
     { path = "/Applications/Plex.app"; }
     { path = "/Applications/Plexamp.app"; }
+    { path = "/Applications/Crossover.app"; }
     { path = "/System/Applications/Photos.app/"; }
     { path = "/System/Applications/Home.app/"; }
     { path = "/Applications/Visual Studio Code.app"; }
@@ -20,7 +21,7 @@
     { path = "/Users/${user}/Applications/Home Manager Apps/kitty.app"; }
     { path = "/Applications/Warp.app/"; }
     { path = "/Applications/Bitwig Studio.app"; }
-    { path = "/Applications/Ableton Live 11 Suite.app"; }
+    { path = "/Applications/Ableton Live 12 Suite.app"; }
     { path = "/Applications/1Password.app/"; }
     {
       path = "";

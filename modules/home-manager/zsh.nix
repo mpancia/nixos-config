@@ -8,7 +8,7 @@
       update = "darwin-rebuild switch --flake ~/.nixpkgs";
       nixcfg = "code ~/.nixpkgs";
       cat = "bat";
-      ls = "exa";
+      ls = "exa --hyperlink";
       tree = "exa --tree";
       cd = "z";
     };
@@ -18,6 +18,8 @@
       [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
     '';
     initExtra = ''
+      eval "$(pyenv init --path)"
+      eval "$(pyenv init -)"
       eval "$(/opt/homebrew/bin/brew shellenv)"
       eval "$(pyenv virtualenv-init -)"
     '';
